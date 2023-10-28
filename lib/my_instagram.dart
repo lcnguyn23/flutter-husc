@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class MyInstagram extends StatefulWidget {
@@ -16,11 +17,56 @@ class _MyInstagramState extends State<MyInstagram> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: SvgPicture.asset(
-            "assets/images/ic_instagram.svg",
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-            width: 110,
-            height: 35,
+          title: Row(
+            children: [
+              SvgPicture.asset(
+                "assets/images/ic_instagram.svg",
+                colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                width: 110,
+                height: 35,
+              ),
+              PopupMenuButton(
+                position: PopupMenuPosition.under,
+                offset: Offset(-125, 12),
+                icon: Icon(
+                  Icons.keyboard_arrow_down,
+                  color: Colors.white,
+                ),
+                color: HexColor('383838'),
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Đang theo dõi",
+                          style: TextStyle(
+                            color: Colors.white
+                          ),
+                        ),
+                        Icon(Icons.people_outline),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: 2,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Yêu thích",
+                          style: TextStyle(
+                              color: Colors.white
+                          ),
+                        ),
+                        Icon(Icons.star_border),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           actions: [
             Padding(
