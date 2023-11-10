@@ -34,6 +34,7 @@ class _MyMathState extends State<MyMath> {
             child: TextFormField(
               controller: soThuNhat,
               keyboardType: TextInputType.number,
+
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Số thứ nhất",
@@ -71,6 +72,7 @@ class _MyMathState extends State<MyMath> {
               child: Text("Cộng"),
             ),
           ),
+
         ],
       ),
     );

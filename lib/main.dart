@@ -5,6 +5,7 @@ import 'package:app2/my_home_page.dart';
 import 'package:app2/my_cinema.dart';
 import 'package:app2/my_instagram.dart';
 import 'package:app2/my_math.dart';
+import 'package:app2/my_instagram_login_page.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Group 02",
-      home: MyInstagram(),
+      home: MyInstagramLogin(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Roboto",
