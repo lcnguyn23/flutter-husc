@@ -80,7 +80,7 @@ class _MyInstagramLoginState extends State<MyInstagramLogin> {
                                       color: Colors.grey,
                                     ),
                                   ),
-                                  hintText: "Tên người dùng, email/số di động",
+                                  hintText: "Tên người dùng, email/số di động ",
                                   hintStyle: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 18
